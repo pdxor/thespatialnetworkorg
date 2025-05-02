@@ -30,7 +30,7 @@ const Navbar: React.FC = () => {
   ];
   
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-slate-900/95 backdrop-blur-sm py-3 shadow-lg' : 'bg-transparent py-5'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black py-3 shadow-lg' : 'bg-black py-5'}`}>
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
       
       {/* Mobile Navigation */}
       <div 
-        className={`md:hidden absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-sm transition-all duration-300 ${
+        className={`md:hidden absolute top-full left-0 right-0 bg-black transition-all duration-300 ${
           isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 invisible'
         } overflow-hidden`}
       >

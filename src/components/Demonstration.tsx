@@ -28,12 +28,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, image, ta
         </div>
         <h3 className="text-xl font-bold mb-2 text-slate-800">{title}</h3>
         <p className="text-slate-600 mb-4">{description}</p>
-        <a 
-          href="#" 
-          className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors"
-        >
-          View Project <ExternalLink size={16} className="ml-1" />
-        </a>
       </div>
     </div>
   );
@@ -42,18 +36,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, image, ta
 const Demonstration: React.FC = () => {
   const projects = [
     {
-      title: "Ecovillage Planning in Hudson Valley, NY",
-      description: "A comprehensive spatial plan for a regenerative community with permaculture design, carbon sequestration zones, and circular water systems.",
-      image: "https://images.pexels.com/photos/9927846/pexels-photo-9927846.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      tags: ["Permaculture", "Community Design", "Carbon Sequestration"]
+      title: "EcoTerra: Regenerative Incubator in Hudson Valley, NY",
+      description: "EcoTerra is a living lab and regenerative incubator on 200 acres in the Catskills, prototyping circular living systems, modular dome housing, agroforestry, and AI-assisted planning tools. The site serves as a testing ground for technologies that merge ecology, community resilience, and immersive spatial storytelling.",
+      image: "/ecoterra.png",
+      tags: ["Regenerative Design", "Agroforestry", "Tech Incubator"]
     },
     {
-      title: "Restoration Mapping in Dominican Republic",
-      description: "Collaborative watershed restoration project involving local communities, NGOs, and government entities to reverse erosion and enhance biodiversity.",
-      image: "https://images.pexels.com/photos/2859169/pexels-photo-2859169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-      tags: ["Watershed Restoration", "Biodiversity", "Community Engagement"]
+      title: "OYA: Watershed Regeneration in the Dominican Republic",
+      description: "Located in the lush mountains of the DR, the OYA project supports reforestation, food sovereignty, and watershed healing by blending indigenous knowledge with open-source geospatial mapping. Working alongside local stewards, we're creating a replicable model of climate adaptation and ecological literacy.",
+      image: "/oya-virtual-tour.png",
+      tags: ["Reforestation", "Watershed Resilience", "Climate Adaptation"]
     }
   ];
+  
 
   return (
     <section id="demonstration" className="py-20 bg-slate-50">
@@ -81,23 +76,36 @@ const Demonstration: React.FC = () => {
         
         <div className="mt-16 text-center">
           <div className="bg-blue-50 border border-blue-100 rounded-xl p-8 max-w-3xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4 text-slate-800">Interactive Map Demo</h3>
+            <h3 className="text-xl font-semibold mb-4 text-slate-800">Integrate with your existing tools</h3>
             <p className="text-slate-600 mb-4">
-              Experience our 3D geospatial visualization capabilities with our interactive demo map.
+              Our platform allows you to bring all of your spatial and immersive tools into a single platform.
+           Here is an example of a virtual tour we created for a project in the Dominican Republic.
             </p>
             <div className="aspect-video bg-slate-200 rounded-lg mb-6 overflow-hidden">
-              <div className="w-full h-full bg-cover bg-center flex items-center justify-center text-slate-400" style={{ backgroundImage: "url('https://images.pexels.com/photos/2253573/pexels-photo-2253573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')" }}>
-                <div className="bg-white/90 backdrop-blur-sm p-4 rounded-md">
-                  <p className="font-medium">Interactive Map Preview</p>
-                </div>
-              </div>
+              <iframe
+                src="https://thespatialnetwork.com/externalmedia/our-virtual-tour"
+                title="DR Virtual Tour"
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: '400px', width: '100%' }}
+                allowFullScreen
+              ></iframe>
             </div>
-            <a 
-              href="#" 
-              className="inline-flex items-center px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors"
-            >
-              Launch Interactive Map <ExternalLink size={16} className="ml-2" />
-            </a>
+          </div>
+        </div>
+        {/* Preview of Features Section */}
+        <div className="mt-20 text-center">
+          <h3 className="text-2xl font-semibold mb-6 text-slate-800">Preview of Features</h3>
+          <div className="flex justify-center">
+            <iframe
+              width="800"
+              height="450"
+              src="https://www.youtube.com/embed/Q22BUENdoOg?si=Nv69ekdI3lUgx_mg"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
       </div>
