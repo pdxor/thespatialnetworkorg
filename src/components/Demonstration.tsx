@@ -122,11 +122,6 @@ const Demonstration: React.FC = () => {
               <iframe width="100%" height="250" src="https://www.youtube.com/embed/BDpx5bj_D0Y" title="3D Maps Convert Spatial Mesh & Build Virtual Worlds!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
               <p className="mt-2 font-medium">3D Maps Convert Spatial Mesh & Build Virtual Worlds!</p>
             </div>
-            {/* Video 6a */}
-            <div>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/9QBbIPSoXWw" title="ChatGPT entpackt: Das Schweizer Taschenmesser der KI" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              <p className="mt-2 font-medium">ChatGPT entpackt: Das Schweizer Taschenmesser der KI</p>
-            </div>
             {/* Video 6b */}
             <div>
               <iframe width="100%" height="250" src="https://www.youtube.com/embed/XJxz11oYYwU" title="Spatial Network Building Your Virtual World's Brain" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
