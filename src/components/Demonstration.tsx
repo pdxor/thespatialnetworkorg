@@ -96,16 +96,87 @@ const Demonstration: React.FC = () => {
         {/* Preview of Features Section */}
         <div className="mt-20 text-center">
           <h3 className="text-2xl font-semibold mb-6 text-slate-800">Preview of Features</h3>
-          <div className="flex justify-center">
-            <iframe
-              width="800"
-              height="450"
-              src="https://www.youtube.com/embed/Q22BUENdoOg?si=Nv69ekdI3lUgx_mg"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+            {/* Video 1 */}
+            <div>
+              <iframe width="100%" height="250" src="https://www.youtube.com/embed/Q22BUENdoOg" title="3D Marketplace Unlock Business Opportunities on Your Land!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <p className="mt-2 font-medium">3D Marketplace Unlock Business Opportunities on Your Land!</p>
+            </div>
+            {/* Video 2 */}
+            <div>
+              <iframe width="100%" height="250" src="https://www.youtube.com/embed/HD-ew8U1rSg" title="New Platform Stages Upload Photos & Map Your Stage!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <p className="mt-2 font-medium">New Platform Stages Upload Photos & Map Your Stage!</p>
+            </div>
+            {/* Video 3 */}
+            <div>
+              <iframe width="100%" height="250" src="https://www.youtube.com/embed/g5JwZ7jYM4U" title="Permaculture Project Designing Sustainable Land Use for Business" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <p className="mt-2 font-medium">Permaculture Project Designing Sustainable Land Use for Business</p>
+            </div>
+            {/* Video 4 */}
+            <div>
+              <iframe width="100%" height="250" src="https://www.youtube.com/embed/bpUdb9oMc8w" title="Sustainable Land Project AI Assistant for Community Support" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <p className="mt-2 font-medium">Sustainable Land Project AI Assistant for Community Support</p>
+            </div>
+            {/* Video 5 */}
+            <div>
+              <iframe width="100%" height="250" src="https://www.youtube.com/embed/BDpx5bj_D0Y" title="3D Maps Convert Spatial Mesh & Build Virtual Worlds!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <p className="mt-2 font-medium">3D Maps Convert Spatial Mesh & Build Virtual Worlds!</p>
+            </div>
+            {/* Video 6a */}
+            <div>
+              <iframe width="100%" height="250" src="https://www.youtube.com/embed/9QBbIPSoXWw" title="ChatGPT entpackt: Das Schweizer Taschenmesser der KI" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <p className="mt-2 font-medium">ChatGPT entpackt: Das Schweizer Taschenmesser der KI</p>
+            </div>
+            {/* Video 6b */}
+            <div>
+              <iframe width="100%" height="250" src="https://www.youtube.com/embed/XJxz11oYYwU" title="Spatial Network Building Your Virtual World's Brain" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <p className="mt-2 font-medium">Spatial Network Building Your Virtual World's Brain</p>
+            </div>
+            {/* Video 7 */}
+            <div>
+              <iframe width="100%" height="250" src="https://www.youtube.com/embed/yK-5evYIFJ4" title="Investor Pitch Deck Community Engagement Secrets" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <p className="mt-2 font-medium">Investor Pitch Deck Community Engagement Secrets</p>
+            </div>
+            {/* Video 8 */}
+            <div>
+              <iframe width="100%" height="250" src="https://www.youtube.com/embed/w74T-lh0saI" title="Task Management Assign, Track & Reward with Badges!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <p className="mt-2 font-medium">Task Management Assign, Track & Reward with Badges!</p>
+            </div>
+            {/* Video 9 */}
+            <div>
+              <iframe width="100%" height="250" src="https://www.youtube.com/embed/trDPVWkLcv4" title="Unlock Badges Squid & Badgito Profile Showcase!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <p className="mt-2 font-medium">Unlock Badges Squid & Badgito Profile Showcase!</p>
+            </div>
+            {/* Video 10 */}
+            <div>
+              <iframe width="100%" height="250" src="https://www.youtube.com/embed/aQpz3BsCfi0" title="Launchpad Projects Showcase & Fund Your Ideas!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <p className="mt-2 font-medium">Launchpad Projects Showcase & Fund Your Ideas!</p>
+            </div>
+            {/* Video 11 */}
+            <div>
+              <iframe width="100%" height="250" src="https://www.youtube.com/embed/CUr-V1MJT1s" title="Google Maps SEO Add Multiple Locations FAST" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <p className="mt-2 font-medium">Google Maps SEO Add Multiple Locations FAST</p>
+            </div>
+            {/* Video 13 */}
+            <div>
+              <iframe width="100%" height="250" src="https://www.youtube.com/embed/BGfTT8v3_Sw" title="YouTube Badges Level Up Your Channel Engagement!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <p className="mt-2 font-medium">YouTube Badges Level Up Your Channel Engagement!</p>
+            </div>
+            {/* Video 14 */}
+            <div>
+              <iframe width="100%" height="250" src="https://www.youtube.com/embed/RLyERpZqSYQ" title="Community Driven Platform Shaping the Future Together!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <p className="mt-2 font-medium">Community Driven Platform Shaping the Future Together!</p>
+            </div>
+            {/* Video 15 */}
+            <div>
+              <iframe width="100%" height="250" src="https://www.youtube.com/embed/yDbPuN-Gd9E" title="Add to Google Maps Quick & Easy Guide 2024" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <p className="mt-2 font-medium">Add to Google Maps Quick & Easy Guide 2024</p>
+            </div>
+            {/* Video 16 */}
+            <div>
+              <iframe width="100%" height="250" src="https://www.youtube.com/embed/pB7qUhC8AlE" title="Backhoe Rental Find Quality Deals & Estimate Price" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+              <p className="mt-2 font-medium">Backhoe Rental Find Quality Deals & Estimate Price</p>
+            </div>
           </div>
         </div>
       </div>

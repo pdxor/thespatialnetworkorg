@@ -14,8 +14,8 @@ const About: React.FC = () => {
           <p>
             The Spatial Network is an open-source platform for regenerative projects worldwide. 
             We combine 3D geospatial visualization, project management tools, AI-driven insights, 
-            and blockchain-based fundraising solutions to empower communities, land stewards, 
-            and innovators in the Global South and beyond.
+            and inventory intelligence with fundraising solutions to empower communities, land stewards, 
+            and innovators in your local eco region.
           </p>
           <p>
             Our mission is to democratize access to advanced spatial technologies, 
