@@ -11,23 +11,40 @@ const Hero: React.FC = () => {
       </div>
       
       {/* Content */}
-      <div className="container mx-auto px-6 relative z-10 text-center">
-        <div className="mb-8 flex justify-center">
-          <Logo className="transform scale-150 animate-float" />
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+          {/* Left: Text Content */}
+          <div className="flex-1 text-center md:text-left">
+            <div className="mb-8 flex justify-center md:justify-start">
+              <Logo className="transform scale-150 animate-float" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight text-gray-100">
+              The Spatial Network
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mb-12 leading-relaxed">
+              Mapping, Managing, and Regenerating the Planet. Together.
+            </p>
+            <a 
+              href="#contact" 
+              className="inline-block px-8 py-4 text-lg font-medium rounded-full bg-gray-900 text-gold-500 hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg border border-gold-500"
+              style={{ color: 'rgb(215,182,115)', borderColor: 'rgb(215,182,115)' }}
+            >
+              Explore Collaboration Opportunities
+            </a>
+          </div>
+          {/* Right: YouTube Video */}
+          <div className="flex-1 w-full max-w-xl aspect-video rounded-xl overflow-hidden shadow-lg border border-gray-200">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/vm1CO6V7SnY"
+              title="Hero Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight text-gray-100">
-          The Spatial Network
-        </h1>
-        <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
-          Mapping, Managing, and Regenerating the Planet. Together.
-        </p>
-        <a 
-          href="#contact" 
-          className="inline-block px-8 py-4 text-lg font-medium rounded-full bg-gray-900 text-gold-500 hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg border border-gold-500"
-          style={{ color: 'rgb(215,182,115)', borderColor: 'rgb(215,182,115)' }}
-        >
-          Explore Collaboration Opportunities
-        </a>
       </div>
 
       {/* Scroll indicator */}

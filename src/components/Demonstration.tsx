@@ -53,6 +53,20 @@ const Demonstration: React.FC = () => {
   return (
     <section id="demonstration" className="py-20 bg-slate-50">
       <div className="container mx-auto px-6">
+        {/* Hero Video Section */}
+        <div className="mb-12 flex justify-center">
+          <div className="w-full max-w-3xl aspect-video rounded-xl overflow-hidden shadow-lg border border-gray-200">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/vm1CO6V7SnY"
+              title="Hero Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">Featured Projects</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
