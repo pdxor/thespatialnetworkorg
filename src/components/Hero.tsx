@@ -15,9 +15,6 @@ const Hero: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-12">
           {/* Left: Text Content */}
           <div className="flex-1 text-center md:text-left">
-            <div className="mb-8 flex justify-center md:justify-start">
-              <Logo className="transform scale-150 animate-float" />
-            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight text-gray-100">
               The Spatial Network
             </h1>
