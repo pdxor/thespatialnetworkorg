@@ -111,11 +111,6 @@ const Demonstration: React.FC = () => {
         <div className="mt-20 text-center">
           <h3 className="text-2xl font-semibold mb-6 text-slate-800">Preview of Features</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-            {/* Video 1 */}
-            <div>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/Q22BUENdoOg" title="3D Marketplace Unlock Business Opportunities on Your Land!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              <p className="mt-2 font-medium">3D Marketplace Unlock Business Opportunities on Your Land!</p>
-            </div>
             {/* Video 2 */}
             <div>
               <iframe width="100%" height="250" src="https://www.youtube.com/embed/HD-ew8U1rSg" title="New Platform Stages Upload Photos & Map Your Stage!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
