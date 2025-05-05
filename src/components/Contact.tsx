@@ -10,27 +10,41 @@ const Contact: React.FC = () => {
   });
   
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormState(prev => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic would go here
-    console.log(formState);
-    setSubmitted(true);
-    // Reset form after showing success message
-    setTimeout(() => {
-      setFormState({
-        name: '',
-        organization: '',
-        email: '',
-        message: ''
+    setLoading(true);
+    setError(null);
+    try {
+      const res = await fetch('/.netlify/functions/send-contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          message: formState.message,
+        }),
       });
-      setSubmitted(false);
-    }, 5000);
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+        setFormState({ name: '', organization: '', email: '', message: '' });
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        setError(data.error || 'Something went wrong. Please try again.');
+      }
+    } catch (err: any) {
+      setError(err.message || 'Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

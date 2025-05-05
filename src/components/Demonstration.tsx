@@ -75,13 +75,13 @@ const Demonstration: React.FC = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <div className="bg-blue-50 border border-blue-100 rounded-xl p-8 max-w-3xl mx-auto">
+          <div className="bg-blue-50 border border-blue-100 rounded-xl p-8 w-full mx-auto">
             <h3 className="text-xl font-semibold mb-4 text-slate-800">Plan it, Build it, and Share it</h3>
             <p className="text-slate-600 mb-4">
               Our platform allows you to bring your regenerative project to life from funding to the build.
             </p>
             <h4 className="text-lg font-bold mb-4 text-slate-700">Feature Walkthrough</h4>
-            <div className="aspect-video bg-slate-200 rounded-lg mb-6 overflow-hidden">
+            <div className="aspect-video bg-slate-200 rounded-lg mb-6 overflow-hidden w-full">
               <iframe
                 width="100%"
                 height="100%"
