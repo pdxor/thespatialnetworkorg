@@ -7,7 +7,6 @@ import Demonstration from './components/Demonstration';
 import Impact from './components/Impact';
 import Partnerships from './components/Partnerships';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
 
 function App() {
   React.useEffect(() => {
@@ -25,7 +24,6 @@ function App() {
       <Impact />
       <Partnerships />
       <Contact />
-      <Footer />
     </div>
   );
 }
