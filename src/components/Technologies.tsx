@@ -16,8 +16,8 @@ interface TechCardProps {
 
 const TechCard: React.FC<TechCardProps> = ({ icon, title, description }) => {
   return (
-    <div className="p-6 rounded-xl bg-slate-800 border border-slate-700 transition-all duration-300 hover:shadow-xl hover:shadow-blue-900/20 hover:border-blue-500/30 hover:-translate-y-1">
-      <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-blue-600/20 text-blue-400 mb-5">
+    <div className="p-6 rounded-xl bg-green-900 border border-green-800 transition-all duration-300 hover:shadow-xl hover:shadow-green-900/30 hover:border-green-700 hover:-translate-y-1">
+      <div className="inline-flex items-center justify-center w-14 h-14 rounded-lg bg-green-800/30 text-green-300 mb-5">
         {icon}
       </div>
       <h3 className="text-xl font-semibold mb-3 text-white">{title}</h3>
