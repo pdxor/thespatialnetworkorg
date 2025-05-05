@@ -76,18 +76,19 @@ const Demonstration: React.FC = () => {
         
         <div className="mt-16 text-center">
           <div className="bg-blue-50 border border-blue-100 rounded-xl p-8 max-w-3xl mx-auto">
-            <h3 className="text-xl font-semibold mb-4 text-slate-800">Integrate with your existing tools</h3>
+            <h3 className="text-xl font-semibold mb-4 text-slate-800">Plan it, Build it, and Share it</h3>
             <p className="text-slate-600 mb-4">
-              Our platform allows you to bring all of your spatial and immersive tools into a single platform.
-           Here is an example of a virtual tour we created for a project in the Dominican Republic.
+              Our platform allows you to bring your regenerative project to life from funding to the build.
             </p>
+            <h4 className="text-lg font-bold mb-4 text-slate-700">Feature Walkthrough</h4>
             <div className="aspect-video bg-slate-200 rounded-lg mb-6 overflow-hidden">
               <iframe
-                src="https://thespatialnetwork.com/externalmedia/our-virtual-tour"
-                title="DR Virtual Tour"
                 width="100%"
                 height="100%"
-                style={{ border: 0, minHeight: '400px', width: '100%' }}
+                src="https://www.youtube.com/embed/TNCKi-YbhPc"
+                title="Feature Walkthrough"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               ></iframe>
             </div>
@@ -96,76 +97,86 @@ const Demonstration: React.FC = () => {
         {/* Preview of Features Section */}
         <div className="mt-20 text-center">
           <h3 className="text-2xl font-semibold mb-6 text-slate-800">Preview of Features</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-            {/* Video 2 */}
-            <div>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/HD-ew8U1rSg" title="New Platform Stages Upload Photos & Map Your Stage!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              <p className="mt-2 font-medium">New Platform Stages Upload Photos & Map Your Stage!</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* 1. Projects */}
+            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
+              <img src="/1-projects.png" alt="Projects" className="w-full md:w-48 rounded-lg object-cover" />
+              <div className="text-left">
+                <h4 className="font-bold text-lg mb-2">Projects</h4>
+                <p>Effortlessly manage and explore all your projects in one place. The Projects view provides a visually engaging dashboard where you can browse, filter, and access detailed information about each project, making organization and navigation seamless.</p>
+              </div>
             </div>
-            {/* Video 3 */}
-            <div>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/g5JwZ7jYM4U" title="Permaculture Project Designing Sustainable Land Use for Business" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              <p className="mt-2 font-medium">Permaculture Project Designing Sustainable Land Use for Business</p>
+            {/* 2. Project View */}
+            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
+              <img src="/2-project-view.png" alt="Project View" className="w-full md:w-48 rounded-lg object-cover" />
+              <div className="text-left">
+                <h4 className="font-bold text-lg mb-2">Project View</h4>
+                <p>Dive deep into individual projects with a comprehensive overview that includes progress tracking, team collaboration, and essential project details. Stay on top of updates and milestones to ensure your project's success.</p>
+              </div>
             </div>
-            {/* Video 4 */}
-            <div>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/bpUdb9oMc8w" title="Sustainable Land Project AI Assistant for Community Support" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              <p className="mt-2 font-medium">Sustainable Land Project AI Assistant for Community Support</p>
+            {/* 3. Inventory System */}
+            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
+              <img src="/3-inventory-system.png" alt="Inventory System" className="w-full md:w-48 rounded-lg object-cover" />
+              <div className="text-left">
+                <h4 className="font-bold text-lg mb-2">Inventory System</h4>
+                <p>Keep track of all your resources with the Inventory System. Easily manage, categorize, and monitor inventory items, ensuring you always know what's available and what needs replenishing.</p>
+              </div>
             </div>
-            {/* Video 5 */}
-            <div>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/BDpx5bj_D0Y" title="3D Maps Convert Spatial Mesh & Build Virtual Worlds!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              <p className="mt-2 font-medium">3D Maps Convert Spatial Mesh & Build Virtual Worlds!</p>
+            {/* 4. Inventory View */}
+            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
+              <img src="/4-inventory-view.png" alt="Inventory View" className="w-full md:w-48 rounded-lg object-cover" />
+              <div className="text-left">
+                <h4 className="font-bold text-lg mb-2">Inventory View</h4>
+                <p>Get a quick snapshot of your inventory status. The Inventory View offers a streamlined interface for reviewing item quantities, recent changes, and fast access to inventory actions.</p>
+              </div>
             </div>
-            {/* Video 6b */}
-            <div>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/XJxz11oYYwU" title="Spatial Network Building Your Virtual World's Brain" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              <p className="mt-2 font-medium">Spatial Network Building Your Virtual World's Brain</p>
+            {/* 5. Map View */}
+            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
+              <img src="/5-map-view.png" alt="Map View" className="w-full md:w-48 rounded-lg object-cover" />
+              <div className="text-left">
+                <h4 className="font-bold text-lg mb-2">Map View</h4>
+                <p>Visualize your projects and assets on an interactive map. The Map View enables spatial organization, location-based insights, and easy navigation between geographically distributed resources.</p>
+              </div>
             </div>
-            {/* Video 7 */}
-            <div>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/yK-5evYIFJ4" title="Investor Pitch Deck Community Engagement Secrets" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              <p className="mt-2 font-medium">Investor Pitch Deck Community Engagement Secrets</p>
+            {/* 6. Calendar View */}
+            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
+              <img src="/6-calendar-view.png" alt="Calendar View" className="w-full md:w-48 rounded-lg object-cover" />
+              <div className="text-left">
+                <h4 className="font-bold text-lg mb-2">Calendar View</h4>
+                <p>Plan and schedule with ease using the Calendar View. Organize tasks, deadlines, and events in a clear, intuitive calendar format to keep your team aligned and on track.</p>
+              </div>
             </div>
-            {/* Video 8 */}
-            <div>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/w74T-lh0saI" title="Task Management Assign, Track & Reward with Badges!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              <p className="mt-2 font-medium">Task Management Assign, Track & Reward with Badges!</p>
+            {/* 7. Task View */}
+            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
+              <img src="/7-task-view.png" alt="Task View" className="w-full md:w-48 rounded-lg object-cover" />
+              <div className="text-left">
+                <h4 className="font-bold text-lg mb-2">Task View</h4>
+                <p>Stay productive with the Task View, where you can create, assign, and track tasks across your projects. Visual boards and lists help you prioritize and manage work efficiently.</p>
+              </div>
             </div>
-            {/* Video 9 */}
-            <div>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/trDPVWkLcv4" title="Unlock Badges Squid & Badgito Profile Showcase!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              <p className="mt-2 font-medium">Unlock Badges Squid & Badgito Profile Showcase!</p>
+            {/* 8. User Profile */}
+            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
+              <img src="/8-user-profile.png" alt="User Profile" className="w-full md:w-48 rounded-lg object-cover" />
+              <div className="text-left">
+                <h4 className="font-bold text-lg mb-2">User Profile</h4>
+                <p>Personalize your experience with the User Profile section. Manage your account details, preferences, and view your activity history, all in one secure and accessible location.</p>
+              </div>
             </div>
-            {/* Video 10 */}
-            <div>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/aQpz3BsCfi0" title="Launchpad Projects Showcase & Fund Your Ideas!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              <p className="mt-2 font-medium">Launchpad Projects Showcase & Fund Your Ideas!</p>
+            {/* 8. Badge System */}
+            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
+              <img src="/8-badge-system.png" alt="Badge System" className="w-full md:w-48 rounded-lg object-cover" />
+              <div className="text-left">
+                <h4 className="font-bold text-lg mb-2">Badge System</h4>
+                <p>Motivate and reward users with the Badge System. Earn badges for achievements and milestones, fostering engagement and recognizing contributions within your community.</p>
+              </div>
             </div>
-            {/* Video 11 */}
-            <div>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/CUr-V1MJT1s" title="Google Maps SEO Add Multiple Locations FAST" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              <p className="mt-2 font-medium">Google Maps SEO Add Multiple Locations FAST</p>
-            </div>
-            {/* Video 13 */}
-            <div>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/BGfTT8v3_Sw" title="YouTube Badges Level Up Your Channel Engagement!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              <p className="mt-2 font-medium">YouTube Badges Level Up Your Channel Engagement!</p>
-            </div>
-            {/* Video 14 */}
-            <div>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/RLyERpZqSYQ" title="Community Driven Platform Shaping the Future Together!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              <p className="mt-2 font-medium">Community Driven Platform Shaping the Future Together!</p>
-            </div>
-            {/* Video 15 */}
-            <div>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/yDbPuN-Gd9E" title="Add to Google Maps Quick & Easy Guide 2024" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              <p className="mt-2 font-medium">Add to Google Maps Quick & Easy Guide 2024</p>
-            </div>
-            {/* Video 16 */}
-            <div>
-              <iframe width="100%" height="250" src="https://www.youtube.com/embed/pB7qUhC8AlE" title="Backhoe Rental Find Quality Deals & Estimate Price" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
-              <p className="mt-2 font-medium">Backhoe Rental Find Quality Deals & Estimate Price</p>
+            {/* 9. Badge Quest */}
+            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
+              <img src="/9-badge-quest.png" alt="Badge Quest" className="w-full md:w-48 rounded-lg object-cover" />
+              <div className="text-left">
+                <h4 className="font-bold text-lg mb-2">Badge Quest</h4>
+                <p>Take on challenges and quests to earn exclusive badges. The Badge Quest feature gamifies your experience, encouraging participation and continuous improvement through fun, goal-oriented activities.</p>
+              </div>
             </div>
           </div>
         </div>
