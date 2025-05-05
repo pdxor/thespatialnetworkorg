@@ -99,84 +99,64 @@ const Demonstration: React.FC = () => {
           <h3 className="text-2xl font-semibold mb-6 text-slate-800">Preview of Features</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             {/* 1. Projects */}
-            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
-              <img src="/1-projects.png" alt="Projects" className="w-full md:w-48 rounded-lg object-cover" />
-              <div className="text-left">
-                <h4 className="font-bold text-lg mb-2">Projects</h4>
-                <p>Effortlessly manage and explore all your projects in one place. The Projects view provides a visually engaging dashboard where you can browse, filter, and access detailed information about each project, making organization and navigation seamless.</p>
-              </div>
+            <div className="flex flex-col bg-white rounded-xl shadow p-6 gap-4 items-center">
+              <img src="/1-projects.png" alt="Projects" className="w-full rounded-lg object-cover mb-4" />
+              <h4 className="font-bold text-lg mb-2 text-center">Projects</h4>
+              <p className="text-center">Effortlessly manage and explore all your projects in one place. The Projects view provides a visually engaging dashboard where you can browse, filter, and access detailed information about each project, making organization and navigation seamless.</p>
             </div>
             {/* 2. Project View */}
-            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
-              <img src="/2-project-view.png" alt="Project View" className="w-full md:w-48 rounded-lg object-cover" />
-              <div className="text-left">
-                <h4 className="font-bold text-lg mb-2">Project View</h4>
-                <p>Dive deep into individual projects with a comprehensive overview that includes progress tracking, team collaboration, and essential project details. Stay on top of updates and milestones to ensure your project's success.</p>
-              </div>
+            <div className="flex flex-col bg-white rounded-xl shadow p-6 gap-4 items-center">
+              <img src="/2-project-view.png" alt="Project View" className="w-full rounded-lg object-cover mb-4" />
+              <h4 className="font-bold text-lg mb-2 text-center">Project View</h4>
+              <p className="text-center">Dive deep into individual projects with a comprehensive overview that includes progress tracking, team collaboration, and essential project details. Stay on top of updates and milestones to ensure your project's success.</p>
             </div>
             {/* 3. Inventory System */}
-            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
-              <img src="/3-inventory-system.png" alt="Inventory System" className="w-full md:w-48 rounded-lg object-cover" />
-              <div className="text-left">
-                <h4 className="font-bold text-lg mb-2">Inventory System</h4>
-                <p>Keep track of all your resources with the Inventory System. Easily manage, categorize, and monitor inventory items, ensuring you always know what's available and what needs replenishing.</p>
-              </div>
+            <div className="flex flex-col bg-white rounded-xl shadow p-6 gap-4 items-center">
+              <img src="/3-inventory-system.png" alt="Inventory System" className="w-full rounded-lg object-cover mb-4" />
+              <h4 className="font-bold text-lg mb-2 text-center">Inventory System</h4>
+              <p className="text-center">Keep track of all your resources with the Inventory System. Easily manage, categorize, and monitor inventory items, ensuring you always know what's available and what needs replenishing.</p>
             </div>
             {/* 4. Inventory View */}
-            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
-              <img src="/4-inventory-view.png" alt="Inventory View" className="w-full md:w-48 rounded-lg object-cover" />
-              <div className="text-left">
-                <h4 className="font-bold text-lg mb-2">Inventory View</h4>
-                <p>Get a quick snapshot of your inventory status. The Inventory View offers a streamlined interface for reviewing item quantities, recent changes, and fast access to inventory actions.</p>
-              </div>
+            <div className="flex flex-col bg-white rounded-xl shadow p-6 gap-4 items-center">
+              <img src="/4-inventory-view.png" alt="Inventory View" className="w-full rounded-lg object-cover mb-4" />
+              <h4 className="font-bold text-lg mb-2 text-center">Inventory View</h4>
+              <p className="text-center">Get a quick snapshot of your inventory status. The Inventory View offers a streamlined interface for reviewing item quantities, recent changes, and fast access to inventory actions.</p>
             </div>
             {/* 5. Map View */}
-            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
-              <img src="/5-map-view.png" alt="Map View" className="w-full md:w-48 rounded-lg object-cover" />
-              <div className="text-left">
-                <h4 className="font-bold text-lg mb-2">Map View</h4>
-                <p>Visualize your projects and assets on an interactive map. The Map View enables spatial organization, location-based insights, and easy navigation between geographically distributed resources.</p>
-              </div>
+            <div className="flex flex-col bg-white rounded-xl shadow p-6 gap-4 items-center">
+              <img src="/5-map-view.png" alt="Map View" className="w-full rounded-lg object-cover mb-4" />
+              <h4 className="font-bold text-lg mb-2 text-center">Map View</h4>
+              <p className="text-center">Visualize your projects and assets on an interactive map. The Map View enables spatial organization, location-based insights, and easy navigation between geographically distributed resources.</p>
             </div>
             {/* 6. Calendar View */}
-            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
-              <img src="/6-calendar-view.png" alt="Calendar View" className="w-full md:w-48 rounded-lg object-cover" />
-              <div className="text-left">
-                <h4 className="font-bold text-lg mb-2">Calendar View</h4>
-                <p>Plan and schedule with ease using the Calendar View. Organize tasks, deadlines, and events in a clear, intuitive calendar format to keep your team aligned and on track.</p>
-              </div>
+            <div className="flex flex-col bg-white rounded-xl shadow p-6 gap-4 items-center">
+              <img src="/6-calendar-view.png" alt="Calendar View" className="w-full rounded-lg object-cover mb-4" />
+              <h4 className="font-bold text-lg mb-2 text-center">Calendar View</h4>
+              <p className="text-center">Plan and schedule with ease using the Calendar View. Organize tasks, deadlines, and events in a clear, intuitive calendar format to keep your team aligned and on track.</p>
             </div>
             {/* 7. Task View */}
-            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
-              <img src="/7-task-view.png" alt="Task View" className="w-full md:w-48 rounded-lg object-cover" />
-              <div className="text-left">
-                <h4 className="font-bold text-lg mb-2">Task View</h4>
-                <p>Stay productive with the Task View, where you can create, assign, and track tasks across your projects. Visual boards and lists help you prioritize and manage work efficiently.</p>
-              </div>
+            <div className="flex flex-col bg-white rounded-xl shadow p-6 gap-4 items-center">
+              <img src="/7-task-view.png" alt="Task View" className="w-full rounded-lg object-cover mb-4" />
+              <h4 className="font-bold text-lg mb-2 text-center">Task View</h4>
+              <p className="text-center">Stay productive with the Task View, where you can create, assign, and track tasks across your projects. Visual boards and lists help you prioritize and manage work efficiently.</p>
             </div>
             {/* 8. User Profile */}
-            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
-              <img src="/8-user-profile.png" alt="User Profile" className="w-full md:w-48 rounded-lg object-cover" />
-              <div className="text-left">
-                <h4 className="font-bold text-lg mb-2">User Profile</h4>
-                <p>Personalize your experience with the User Profile section. Manage your account details, preferences, and view your activity history, all in one secure and accessible location.</p>
-              </div>
+            <div className="flex flex-col bg-white rounded-xl shadow p-6 gap-4 items-center">
+              <img src="/8-user-profile.png" alt="User Profile" className="w-full rounded-lg object-cover mb-4" />
+              <h4 className="font-bold text-lg mb-2 text-center">User Profile</h4>
+              <p className="text-center">Personalize your experience with the User Profile section. Manage your account details, preferences, and view your activity history, all in one secure and accessible location.</p>
             </div>
             {/* 8. Badge System */}
-            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
-              <img src="/8-badge-system.png" alt="Badge System" className="w-full md:w-48 rounded-lg object-cover" />
-              <div className="text-left">
-                <h4 className="font-bold text-lg mb-2">Badge System</h4>
-                <p>Motivate and reward users with the Badge System. Earn badges for achievements and milestones, fostering engagement and recognizing contributions within your community.</p>
-              </div>
+            <div className="flex flex-col bg-white rounded-xl shadow p-6 gap-4 items-center">
+              <img src="/8-badge-system.png" alt="Badge System" className="w-full rounded-lg object-cover mb-4" />
+              <h4 className="font-bold text-lg mb-2 text-center">Badge System</h4>
+              <p className="text-center">Motivate and reward users with the Badge System. Earn badges for achievements and milestones, fostering engagement and recognizing contributions within your community.</p>
             </div>
             {/* 9. Badge Quest */}
-            <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow p-6 gap-6">
-              <img src="/9-badge-quest.png" alt="Badge Quest" className="w-full md:w-48 rounded-lg object-cover" />
-              <div className="text-left">
-                <h4 className="font-bold text-lg mb-2">Badge Quest</h4>
-                <p>Take on challenges and quests to earn exclusive badges. The Badge Quest feature gamifies your experience, encouraging participation and continuous improvement through fun, goal-oriented activities.</p>
-              </div>
+            <div className="flex flex-col bg-white rounded-xl shadow p-6 gap-4 items-center">
+              <img src="/9-badge-quest.png" alt="Badge Quest" className="w-full rounded-lg object-cover mb-4" />
+              <h4 className="font-bold text-lg mb-2 text-center">Badge Quest</h4>
+              <p className="text-center">Take on challenges and quests to earn exclusive badges. The Badge Quest feature gamifies your experience, encouraging participation and continuous improvement through fun, goal-oriented activities.</p>
             </div>
           </div>
         </div>
