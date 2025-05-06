@@ -115,7 +115,7 @@ exports.handler = async (event) => {
         html: htmlContent,
         replyTo: email,
       };
-
+  
       // Optional: Confirmation message to the person who submitted the form
       // Uncomment this section if you want to send confirmation emails
       /*
