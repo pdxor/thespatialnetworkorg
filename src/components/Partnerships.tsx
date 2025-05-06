@@ -62,7 +62,7 @@ const Partnerships: React.FC = () => {
               <h3 className="text-xl font-semibold mb-2">Regenerative Projects</h3>
               <p className="text-slate-300 leading-relaxed">
                 We provide specialized support for regenerative agriculture, ecosystem restoration, 
-                and community resilience projects worldwide, with particular focus on the Global South.
+                and community resilience projects worldwide.
               </p>
             </div>
           </div>

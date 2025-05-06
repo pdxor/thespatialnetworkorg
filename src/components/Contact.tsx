@@ -29,6 +29,7 @@ const Contact: React.FC = () => {
         body: JSON.stringify({
           name: formState.name,
           email: formState.email,
+          organization: formState.organization,
           message: formState.message,
         }),
       });
