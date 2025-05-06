@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, CheckCircle } from 'lucide-react';
+import { Send, CheckCircle, AlertTriangle } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formState, setFormState] = useState({
@@ -12,6 +12,7 @@ const Contact: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [warning, setWarning] = useState<string | null>(null);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -22,6 +23,8 @@ const Contact: React.FC = () => {
     e.preventDefault();
     setLoading(true);
     setError(null);
+    setWarning(null);
+    
     try {
       const res = await fetch('/.netlify/functions/send-contact', {
         method: 'POST',
@@ -37,10 +40,21 @@ const Contact: React.FC = () => {
       const data = await res.json();
       
       if (data.success) {
+        // Form was submitted successfully
         setSubmitted(true);
         setFormState({ name: '', organization: '', email: '', message: '' });
-        setTimeout(() => setSubmitted(false), 5000);
+        
+        // Check if there's a warning message
+        if (data.warning) {
+          setWarning(data.warning);
+        }
+        
+        setTimeout(() => {
+          setSubmitted(false);
+          setWarning(null);
+        }, 8000); // longer timeout to allow reading the warning
       } else {
+        // Server returned an error
         console.error('Server error:', data);
         const errorMessage = data.details?.body?.errors?.[0]?.message || 
                             data.error || 
@@ -95,6 +109,13 @@ const Contact: React.FC = () => {
                   <p className="text-slate-600 mb-4">
                     Your message has been received. We'll be in touch with you shortly.
                   </p>
+                  
+                  {warning && (
+                    <div className="mt-4 p-4 bg-amber-50 border border-amber-200 rounded-lg text-amber-700 flex items-start">
+                      <AlertTriangle size={20} className="flex-shrink-0 mr-2 mt-0.5" />
+                      <p>{warning}</p>
+                    </div>
+                  )}
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
