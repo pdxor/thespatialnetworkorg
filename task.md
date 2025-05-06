@@ -26,7 +26,7 @@
    - ✅ Verify all environment variables are set in Netlify
    - ✅ Test form on development environment first
    - ✅ Deploy to production and test full flow
-   - ✅ Check Netlify Function logs if issues occur
+   - ✅ Check Netlify Function logs if issues occu r
 
 ### Troubleshooting
 
