@@ -33,16 +33,23 @@ const Contact: React.FC = () => {
           message: formState.message,
         }),
       });
+      
       const data = await res.json();
+      
       if (data.success) {
         setSubmitted(true);
         setFormState({ name: '', organization: '', email: '', message: '' });
         setTimeout(() => setSubmitted(false), 5000);
       } else {
-        setError(data.error || 'Something went wrong. Please try again.');
+        console.error('Server error:', data);
+        const errorMessage = data.details?.body?.errors?.[0]?.message || 
+                            data.error || 
+                            'Something went wrong. Please try again.';
+        setError(errorMessage);
       }
     } catch (err: any) {
-      setError(err.message || 'Something went wrong. Please try again.');
+      console.error('Form submission error:', err);
+      setError('Network error. Please check your connection and try again.');
     } finally {
       setLoading(false);
     }
@@ -91,6 +98,12 @@ const Contact: React.FC = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {error && (
+                    <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
+                      <p>{error}</p>
+                    </div>
+                  )}
+                  
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-1">
                       Name
@@ -157,9 +170,18 @@ const Contact: React.FC = () => {
                   
                   <button
                     type="submit"
-                    className="w-full flex items-center justify-center px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                    disabled={loading}
+                    className={`w-full flex items-center justify-center px-6 py-3 rounded-lg ${
+                      loading 
+                        ? 'bg-blue-400 cursor-not-allowed' 
+                        : 'bg-blue-600 hover:bg-blue-700'
+                    } text-white transition-colors`}
                   >
-                    Send Message <Send size={16} className="ml-2" />
+                    {loading ? (
+                      <>Sending... <span className="ml-2 animate-spin">⏳</span></>
+                    ) : (
+                      <>Send Message <Send size={16} className="ml-2" /></>
+                    )}
                   </button>
                 </form>
               )}
