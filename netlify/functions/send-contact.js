@@ -106,16 +106,34 @@ exports.handler = async (event) => {
       
       sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
+      // Main message to site owner
       const msg = {
-        to: 'info@thespatialnetwork.org',
-        from: 'info@thespatialnetwork.org', // Must be verified in SendGrid
+        to: 'kahlilcalavas@gmail.com', // Send to your Gmail
+        from: 'kahlil@terra-lux.org', // Updated to verified sender email
         subject: emailSubject,
         text: textContent,
         html: htmlContent,
         replyTo: email,
       };
 
+      // Optional: Confirmation message to the person who submitted the form
+      // Uncomment this section if you want to send confirmation emails
+      /*
+      const confirmationMsg = {
+        to: email,
+        from: 'kahlil@terra-lux.org', // Updated to verified sender email
+        subject: 'Thank you for contacting The Spatial Network',
+        text: `Dear ${name},\n\nThank you for contacting The Spatial Network. We have received your message and will get back to you soon.\n\nBest regards,\nThe Spatial Network Team`,
+        html: `<p>Dear ${name},</p><p>Thank you for contacting The Spatial Network. We have received your message and will get back to you soon.</p><p>Best regards,<br>The Spatial Network Team</p>`,
+      };
+      */
+
       console.log("Attempting to send via SendGrid...");
+      // If using confirmation emails, uncomment the Promise.all section
+      // await Promise.all([
+      //   sgMail.send(msg),
+      //   sgMail.send(confirmationMsg)
+      // ]);
       await sgMail.send(msg);
       console.log("Email sent successfully via SendGrid");
       emailSent = true;
@@ -138,8 +156,8 @@ exports.handler = async (event) => {
             Authorization: `Bearer ${process.env.NETLIFY_EMAILS_PROVIDER_API_KEY}`,
           },
           body: JSON.stringify({
-            from: 'info@thespatialnetwork.org',
-            to: 'info@thespatialnetwork.org',
+            from: 'kahlil@terra-lux.org', // Updated to verified sender email
+            to: 'kahlilcalavas@gmail.com', // Send to your Gmail
             subject: emailSubject,
             text: textContent,
             html: htmlContent,
