@@ -1,56 +1,75 @@
-import React from 'react';
-import Logo from './Logo';
+import React, { useEffect, useRef } from 'react';
+import { ChevronDown } from 'lucide-react';
+import { applyScrollAnimation } from '../utils/animations';
 
 const Hero: React.FC = () => {
+  const heroRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      if (heroRef.current) {
+        const scrollPosition = window.scrollY;
+        heroRef.current.style.backgroundPositionY = `${scrollPosition * 0.4}px`;
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToNextSection = () => {
+    const nextSection = document.getElementById('value-proposition');
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
-      {/* Background gradient with animated overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 to-slate-800 z-0">
-        <div className="absolute inset-0 opacity-20 bg-[url('/thespatialnetworkscreen.webp')] bg-cover bg-center"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
-      </div>
+    <div 
+      id="home"
+      ref={heroRef}
+      className="min-h-screen flex items-center justify-center relative text-white bg-cover bg-center"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/1578570/pexels-photo-1578570.jpeg?auto=compress&cs=tinysrgb&w=1600')`,
+      }}
+    >
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70 z-10"></div>
       
-      {/* Content */}
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12">
-          {/* Left: Text Content */}
-          <div className="flex-1 text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 tracking-tight text-gray-100">
-              The Spatial Network
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mb-12 leading-relaxed">
-              Mapping, Managing, and Regenerating the Planet. Together.
-            </p>
+      <div className="container mx-auto px-4 md:px-6 pt-20 z-20">
+        <div className="text-center max-w-3xl mx-auto">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            See Regeneration from Above — and Within
+          </h1>
+          
+          <p className="text-xl md:text-2xl mb-10 text-gray-200">
+            Experience the story of your land in stunning, immersive detail. From aerial drone captures to 3D walkthroughs.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <a 
               href="#contact" 
-              className="inline-block px-8 py-4 text-lg font-medium rounded-full bg-gray-900 text-gold-500 hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-lg border border-gold-500"
-              style={{ color: 'rgb(215,182,115)', borderColor: 'rgb(215,182,115)' }}
+              className="px-8 py-3 bg-primary hover:bg-primary-dark text-white rounded-full font-medium transition-all transform hover:scale-105"
             >
-              Explore Collaboration Opportunities
+              Start Your Journey
             </a>
-          </div>
-          {/* Right: YouTube Video */}
-          <div className="flex-1 w-full max-w-xl aspect-video rounded-xl overflow-hidden shadow-lg border border-gray-200">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/vm1CO6V7SnY"
-              title="Hero Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
+            <a 
+              href="#how-it-works" 
+              className="px-8 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-full font-medium transition-all"
+            >
+              Learn How It Works
+            </a>
           </div>
         </div>
       </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M7 13l5 5 5-5M7 7l5 5 5-5" />
-        </svg>
-      </div>
-    </section>
+      
+      <button 
+        onClick={scrollToNextSection}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce z-20"
+        aria-label="Scroll down"
+      >
+        <ChevronDown size={36} />
+      </button>
+    </div>
   );
 };
 
