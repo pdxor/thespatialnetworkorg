@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
               <span className="font-bold text-xl">The Spatial Network</span>
             </div>
             <p className="text-gray-400 mb-6">
-              Immersive virtual tours for regenerative land projects.
+              Map, manage, and scale your regenerative projects.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -28,13 +28,13 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h3 className="font-bold text-lg mb-4">Solutions</h3>
+            <h3 className="font-bold text-lg mb-4">Platform</h3>
             <ul className="space-y-2">
-              <li><a href="#solutions" className="text-gray-400 hover:text-white transition-colors">Regenerative Real Estate</a></li>
-              <li><a href="#solutions" className="text-gray-400 hover:text-white transition-colors">Permaculture Farms</a></li>
-              <li><a href="#solutions" className="text-gray-400 hover:text-white transition-colors">Retreat Centers</a></li>
-              <li><a href="#solutions" className="text-gray-400 hover:text-white transition-colors">Ecovillages</a></li>
-              <li><a href="#solutions" className="text-gray-400 hover:text-white transition-colors">Conservation Projects</a></li>
+              <li><a href="#value-proposition" className="text-gray-400 hover:text-white transition-colors">Why The Spatial Network</a></li>
+              <li><a href="#features" className="text-gray-400 hover:text-white transition-colors">Intelligent Tools</a></li>
+              <li><a href="#how-it-works" className="text-gray-400 hover:text-white transition-colors">Early Adopter Offer</a></li>
+              <li><a href="#community" className="text-gray-400 hover:text-white transition-colors">Community</a></li>
+              <li><a href="#schedule-demo" className="text-gray-400 hover:text-white transition-colors">Schedule a Demo</a></li>
             </ul>
           </div>
           
@@ -42,10 +42,8 @@ const Footer: React.FC = () => {
             <h3 className="font-bold text-lg mb-4">Company</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Our Team</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
+              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
             </ul>
           </div>
           

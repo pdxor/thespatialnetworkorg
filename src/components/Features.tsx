@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import { Compass, Map, Cuboid as Cube, DivideIcon as LucideIcon, Link, Globe } from 'lucide-react';
+import { Compass, Map, Cuboid as Cube, Link, Globe, Zap, Brain, MessageSquare, Package } from 'lucide-react';
 import { applyScrollAnimation } from '../utils/animations';
 
 interface Feature {
-  icon: LucideIcon;
+  icon: React.ElementType;
   title: string;
   description: string;
 }
@@ -16,29 +16,24 @@ const Features: React.FC = () => {
   // Set up features
   const features: Feature[] = [
     {
-      icon: Compass,
-      title: "360° Virtual Walkthroughs",
-      description: "Immersive indoor and outdoor tours that let visitors explore every corner of your land project."
+      icon: Zap,
+      title: "Grant Agent",
+      description: "An AI assistant that finds relevant grants and helps you craft winning proposals, so you can secure funding faster."
     },
     {
-      icon: Globe,
-      title: "High-Resolution Aerial Tours",
-      description: "Breathtaking drone footage that showcases your land from unique and stunning perspectives."
+      icon: Brain,
+      title: "Feasibility Agent",
+      description: "An AI advisor that evaluates your project plans or new ideas for viability and sustainability, giving you data-driven confidence before you invest resources."
     },
     {
-      icon: Map,
-      title: "Orthomosaic Mapping & 3D Models",
-      description: "Precise digital twins of your property for planning, analysis, and visualization."
+      icon: MessageSquare,
+      title: "Onboard Agent",
+      description: "An AI chatbot trained on your project's information to answer questions and guide new team members, making onboarding and collaboration seamless."
     },
     {
-      icon: Cube,
-      title: "Interactive Maps with Hotspots",
-      description: "Engaging maps with clickable points of interest that reveal detailed information and media."
-    },
-    {
-      icon: Link,
-      title: "Web-Ready Embeds + Hosting",
-      description: "Easy integration with your website and reliable hosting for your virtual tour content."
+      icon: Package,
+      title: "Future Agents Access",
+      description: "Early membership comes with token credits for upcoming agents and features, ensuring you always have the latest tools without extra cost."
     }
   ];
 
@@ -66,10 +61,10 @@ const Features: React.FC = () => {
           className="max-w-3xl mx-auto text-center mb-16 opacity-0 transition-all duration-1000"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-            What You Get
+            Intelligent Tools at Your Fingertips
           </h2>
           <p className="text-lg text-gray-600">
-            Our comprehensive virtual tour packages offer everything you need to showcase your land project effectively.
+            As an early member, you'll gain immediate access to a suite of powerful tools designed to boost your project's success.
           </p>
         </div>
         

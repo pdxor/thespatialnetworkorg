@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Calendar, Camera, Share2 } from 'lucide-react';
+import { Calendar, Camera, Share2, Gift, Layers, Zap as ZapIcon, Award } from 'lucide-react';
 import { applyScrollAnimation } from '../utils/animations';
 
 interface Step {
@@ -15,19 +15,24 @@ const HowItWorks: React.FC = () => {
   
   const steps: Step[] = [
     {
-      icon: Calendar,
-      title: "Book a Site Survey",
-      description: "Schedule a consultation to discuss your property and specific needs. We'll plan the optimal time for capturing your land."
+      icon: Gift,
+      title: "2-Year Membership (58% Off)",
+      description: "Lock in 24 months of full platform access for $1,000 (a $2,400 value). You save $1,400 by joining now."
     },
     {
-      icon: Camera,
-      title: "We Capture Your Land",
-      description: "Our team visits your site with specialized equipment to capture stunning aerial and ground-level imagery of your property."
+      icon: Layers,
+      title: "All Features Included",
+      description: "Enjoy unrestricted use of all current tools (Grant, Feasibility, and Onboard Agents) and every new feature we release – at no extra charge."
     },
     {
-      icon: Share2,
-      title: "You Receive a Shareable Virtual Tour",
-      description: "We process and deliver your immersive virtual tour, ready to embed on your website or share with your audience."
+      icon: ZapIcon,
+      title: "Future Agent Credits",
+      description: "Receive exclusive token credits to unlock upcoming AI agents and premium services as they roll out."
+    },
+    {
+      icon: Award,
+      title: "Limited Opportunity",
+      description: "This discounted buy-in is available to the first wave of visionary users. Don't miss your chance to pioneer this movement and shape the future of regenerative tech!"
     }
   ];
 
@@ -55,18 +60,18 @@ const HowItWorks: React.FC = () => {
           className="max-w-3xl mx-auto text-center mb-16 opacity-0 transition-all duration-1000"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            How It Works
+            Exclusive Early Adopter Offer
           </h2>
           <p className="text-xl text-white/80">
-            Our streamlined process makes creating your virtual tour simple and efficient.
+            For a limited time, we invite you to become a founding member of The Spatial Network.
           </p>
         </div>
         
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-5xl mx-auto">
           {/* Connecting line */}
-          <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-white/30 -translate-y-1/2 z-0"></div>
+          {/* <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-white/30 -translate-y-1/2 z-0"></div> */}
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => {
               const Icon = step.icon;
               
@@ -76,16 +81,12 @@ const HowItWorks: React.FC = () => {
                   ref={el => stepsRef.current[index] = el}
                   className="relative z-10 opacity-0 transform translate-x-16"
                 >
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 h-full">
-                    <div className="w-16 h-16 bg-white text-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 h-full flex flex-col">
+                    <div className="w-16 h-16 bg-white text-primary rounded-full flex items-center justify-center mx-auto mb-6 flex-shrink-0">
                       <Icon size={32} />
                     </div>
                     
-                    <div className="text-center">
-                      <div className="inline-block bg-white/20 text-white text-sm font-bold rounded-full px-3 py-1 mb-4">
-                        Step {index + 1}
-                      </div>
-                      
+                    <div className="text-center flex-grow">
                       <h3 className="text-xl font-semibold mb-4">
                         {step.title}
                       </h3>

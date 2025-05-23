@@ -38,11 +38,11 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6 pt-20 z-20">
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            See Regeneration from Above — and Within
+            The Spatial Network – Empowering Regenerative Enterprises
           </h1>
           
           <p className="text-xl md:text-2xl mb-10 text-gray-200">
-            Experience the story of your land in stunning, immersive detail. From aerial drone captures to 3D walkthroughs.
+            For owners of regenerative businesses and eco-tourism ventures, The Spatial Network is a next-generation platform that helps you map, manage, and scale your projects. Inspired by nature's ecosystems (biomimicry), it connects all the elements of your enterprise into one productive, living system. With interactive 3D maps, AI-driven assistants, and built-in funding tools, you'll save time, make smarter decisions, and amplify your positive impact. Now offering an exclusive early-adopter membership: $1,000 for two years (normally $2,400) – join now to secure over 50% in savings as you grow with us.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -50,13 +50,13 @@ const Hero: React.FC = () => {
               href="#contact" 
               className="px-8 py-3 bg-primary hover:bg-primary-dark text-white rounded-full font-medium transition-all transform hover:scale-105"
             >
-              Start Your Journey
+              Join Early Adopter Program
             </a>
             <a 
-              href="#how-it-works" 
+              href="#value-proposition" 
               className="px-8 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-full font-medium transition-all"
             >
-              Learn How It Works
+              Learn More
             </a>
           </div>
         </div>
