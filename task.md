@@ -1,3 +1,29 @@
+# Redirect Homepage to thespatialnetwork.net
+
+## Tasks
+
+### 1. Create Netlify Redirect Configuration
+- [ ] Create `netlify.toml` file in root directory
+- [ ] Configure redirect from root path to thespatialnetwork.net
+- [ ] Set appropriate status code (301 for permanent redirect)
+
+### 2. Alternative HTML Meta Redirect (Fallback)
+- [ ] Add meta refresh tag to index.html as backup
+- [ ] Ensure it works even if Netlify config fails
+
+### 3. Update Documentation
+- [ ] Document the redirect in README.md
+- [ ] Note the target domain and redirect method
+
+### 4. Test Redirect
+- [ ] Verify redirect works in development
+- [ ] Test deployment to ensure redirect functions properly
+
+## Implementation Notes
+- Using Netlify's built-in redirect functionality for optimal performance
+- 301 redirect for permanent redirect (better for SEO)
+- Fallback meta refresh for redundancy
+
 ## Task: Set Up Contact Form Email with Netlify Function and SendGrid
 
 ### Setup Instructions

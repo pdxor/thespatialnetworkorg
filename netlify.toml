@@ -1,0 +1,15 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/"
+  to = "https://thespatialnetwork.net"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "https://thespatialnetwork.net"
+  status = 301
+  force = true 
